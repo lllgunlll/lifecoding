@@ -2,25 +2,59 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<title title="Database">Oracle!</title>
-	<style>
-    	li {
+    <meta charset="UTF-8">
+    <title title="Database">Oracle!</title>
+    <style>
+        li {
     		font-weight: bold;
     		font-size : 18px;
     	}
     </style>
+    <script>
+        function nightDayHandler(self){
+            var target = document.querySelector('body');
+
+            if(self.value === 'night'){
+                target.style.backgroundColor = 'black';
+                target.style.color = 'white';
+                self.value = 'day';
+
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+             while (i < alist.length){
+                alist[i].style.color = 'powderblue';
+                i = i + 1;
+             }
+            } else {
+                target.style.backgroundColor = 'white';
+                target.style.color = 'black';
+                self.value = 'night';
+
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+                while (i < alist.length){
+                alist[i].style.color = 'blue';
+                i = i + 1;
+                 }
+            }
+        }
+
+    </script>
 </head>
+
 <body>
-	<h1><a href="index.html">RDBMS</a></h1>
-	<ol>
-		<li><a href="1.html" target="_blank" title="Oracle">Oracle</a></li>
+    <h1><a href="index.html">RDBMS</a></h1>
+    <input type="button" value="night" onclick="
+    	nightDayHandler(this);
+    ">
+    <ol>
+        <li><a href="1.html" target="_blank" title="Oracle">Oracle</a></li>
         <li><a href="2.html" target="_blank" title="MYSQL">mySQL</a></li>
         <li><a href="3.html" target="_blank" title="NO-SQL">NO-SQL</a></li>
-	</ol>	
-	<h3>ORACLE</h3>
-	<p>Oracle Database (commonly referred to as Oracle RDBMS or simply as Oracle) is a multi-model database management system produced and marketed by Oracle Corporation.<br>
-	It is a database commonly used for running online transaction processing (OLTP), data warehousing (DW) and mixed (OLTP & DW) database workloads. The latest generation, Oracle Database 18c, is available on-prem, on-Cloud, or in a hybrid-Cloud environment. 18c may also be deployed on Oracle Engineered Systems (e.g. Exadata) on-prem, on Oracle (public) Cloud or (private) Cloud at Customer. At Openworld 2017 in San Francisco, Executive Chairman of the Board and CTO, Larry Ellison announced the next database generation, Oracle Autonomous Database.</p>
-
+    </ol>
+    <h3>ORACLE</h3>
+    <p>Oracle Database (commonly referred to as Oracle RDBMS or simply as Oracle) is a multi-model database management system produced and marketed by Oracle Corporation.<br>
+        It is a database commonly used for running online transaction processing (OLTP), data warehousing (DW) and mixed (OLTP & DW) database workloads. The latest generation, Oracle Database 18c, is available on-prem, on-Cloud, or in a hybrid-Cloud environment. 18c may also be deployed on Oracle Engineered Systems (e.g. Exadata) on-prem, on Oracle (public) Cloud or (private) Cloud at Customer. At Openworld 2017 in San Francisco, Executive Chairman of the Board and CTO, Larry Ellison announced the next database generation, Oracle Autonomous Database.</p>
 </body>
+
 </html>
