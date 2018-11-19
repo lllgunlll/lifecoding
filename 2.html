@@ -4,60 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <title title="Database">mysql</title>
-    <style>
-        a{
-            color : red;
-        }
-        li {
-            font-weight: bold;
-            font-size : 18px;
-        }
-    </style>
-    <script>
-        function nightDayHandler(self){
-            var target = document.querySelector('body');
-
-            if(self.value === 'night'){
-                target.style.backgroundColor = 'black';
-                target.style.color = 'white';
-                self.value = 'day';
-
-                var alist = document.querySelectorAll('a');
-                var i = 0;
-             while (i < alist.length){
-                alist[i].style.color = 'powderblue';
-                i = i + 1;
-             }
-            } else {
-                target.style.backgroundColor = 'white';
-                target.style.color = 'black';
-                self.value = 'night';
-
-                var alist = document.querySelectorAll('a');
-                var i = 0;
-                while (i < alist.length){
-                alist[i].style.color = 'blue';
-                i = i + 1;
-                 }
-            }
-        }
-
-    </script>
+    <link rel="stylesheet" href="style.css"> 
 </head>
 
 <body>
-    <h1><a href="index.html">RDBMS</a></h1>
-    <input type="button" value="night" onclick="
+     <input id="btn" type="button" value="night" onclick="
         nightDayHandler(this);
     ">
-    <ol>
-        <li><a href="1.html" target="_blank" title="Oracle">Oracle</a></li>
-        <li><a href="2.html" target="_blank" title="MYSQL">mySQL</a></li>
-        <li><a href="3.html" target="_blank" title="NO-SQL">NO-SQL</a></li>
-    </ol>
-    <h3>mySQL</h3>
-    <p>MySQL (/ˌmaɪˌɛsˌkjuːˈɛl/ "My S-Q-L")[5] is an open-source relational database management system (RDBMS).[6] Its name is a combination of "My", the name of co-founder Michael Widenius's daughter,[7] and "SQL", the abbreviation for Structured Query Language. The MySQL development project has made its source code available under the terms of the GNU General Public License, as well as under a variety of proprietary agreements. MySQL was owned and sponsored by a single for-profit firm, the Swedish company MySQL AB, now owned by Oracle Corporation.[8] For proprietary use, several paid editions are available, and offer additional functionality.
-        MySQL is a central component of the LAMP open-source web application software stack (and other "AMP" stacks). LAMP is an acronym for "Linux, Apache, MySQL, Perl/PHP/Python". Applications that use the MySQL database include: TYPO3, MODx, Joomla, WordPress, Simple Machines Forum, phpBB, MyBB, and Drupal. MySQL is also used in many high-profile, large-scale websites, including Google[9][10] (though not for searches), Facebook,[11][12][13] Twitter,[14] Flickr,[15] and YouTube.[16]</p>
+    <h1><a href="index.html">RDBMS</a></h1>
+    <div id="grid">
+        <ol>
+            <li><a href="1.html"  title="Oracle">Oracle</a></li>
+            <li><a href="2.html"  title="MYSQL">mySQL</a></li>
+            <li><a href="3.html"  title="NO-SQL">NO-SQL</a></li>
+        </ol>
+
+        <div id="article">
+            <h3>mySQL</h3>
+            <p>MySQL (/ˌmaɪˌɛsˌkjuːˈɛl/ "My S-Q-L")[5] is an open-source relational database management system (RDBMS).[6] Its name is a combination of "My", the name of co-founder Michael Widenius's daughter,[7] and "SQL", the abbreviation for Structured Query Language. The MySQL development project has made its source code available under the terms of the GNU General Public License, as well as under a variety of proprietary agreements. MySQL was owned and sponsored by a single for-profit firm, the Swedish company MySQL AB, now owned by Oracle Corporation.[8] For proprietary use, several paid editions are available, and offer additional functionality.
+                MySQL is a central component of the LAMP open-source web application software stack (and other "AMP" stacks). LAMP is an acronym for "Linux, Apache, MySQL, Perl/PHP/Python". Applications that use the MySQL database include: TYPO3, MODx, Joomla, WordPress, Simple Machines Forum, phpBB, MyBB, and Drupal. MySQL is also used in many high-profile, large-scale websites, including Google[9][10] (though not for searches), Facebook,[11][12][13] Twitter,[14] Flickr,[15] and YouTube.[16]</p>
+        </div>
+    </div>
+    <script src="main.js"></script>
 </body>
 
 </html>

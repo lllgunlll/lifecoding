@@ -4,61 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <title title="Database">Database</title>
-    <style>
-        a {
-            color:black;
-            text-decoration: nont;
-        }
-        h1{
-            font-size: 45px;
-            text-align:center;
-        }
-    </style>
-    <script>
-        function nightDayHandler(self){
-            var target = document.querySelector('body');
-
-            if(self.value === 'night'){
-                target.style.backgroundColor = 'black';
-                target.style.color = 'white';
-                self.value = 'day';
-
-                var alist = document.querySelectorAll('a');
-                var i = 0;
-             while (i < alist.length){
-                alist[i].style.color = 'powderblue';
-                i = i + 1;
-             }
-            } else {
-                target.style.backgroundColor = 'white';
-                target.style.color = 'black';
-                self.value = 'night';
-
-                var alist = document.querySelectorAll('a');
-                var i = 0;
-                while (i < alist.length){
-                alist[i].style.color = 'blue';
-                i = i + 1;
-                 }
-            }
-        }
-
-    </script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1><a href="index.html">RDBMS</a></h1>
-    <input type="button" value="night" onclick="
+    <input id="btn" type="button" value="night" onclick="
             nightDayHandler(this);
         ">
-    <ol>
-        <li><a href="1.html" target="_blank" title="Oracle">Oracle</a></li>
-        <li><a href="2.html" target="_blank" title="MYSQL">mySQL</a></li>
-        <li><a href="3.html" target="_blank" title="NO-SQL">NO-SQL</a></li>
-    </ol>
-    <p>A relational database management system (RDBMS) is a database management system (DBMS) based on the relational model invented by Edgar F. Codd at IBM's San Jose Research Laboratory. Most databases in widespread use today are based on his relational database model.<br>
-        RDBMSs have been a common choice for the storage of information in databases used for financial records, manufacturing and logistical information, personnel data, and other applications since the 1980s. Relational databases have often replaced legacy hierarchical databases and network databases because they were easier to implement and administer.<br>
-        Nonetheless, relational databases received continued, unsuccessful challenges by object database management systems in the 1980s and 1990s, (which were introduced in an attempt to address the so-called object-relational impedance mismatch between erlational databases and object-oriented application programs), as well as by XML database management systems in the 1990s.[citation needed] However, due to the expanse of technologies, such as horizontal scaling of computer clusters, NoSQL databases have recently become popular as an alternative to RDBMS databases.</p>
+    <h1><a href="index.html">RDBMS</a></h1>
+    <div id="grid">
+            <ol>
+                <li><a href = "1.html" title = "Oracle">Oracle</a></li>
+                <li><a href = "2.html" title = "MYSQL" >mySQL</a></li>
+                <li><a href = "3.html" title = "NO-SQL">NO-SQL</a></li>
+            </ol>
+
+        <div id="article">
+            <p>A relational database management system (RDBMS) is a database management system (DBMS) based on the relational model invented by Edgar F. Codd at IBM's San Jose Research Laboratory. Most databases in widespread use today are based on his relational database model.<br>
+            RDBMSs have been a common choice for the storage of information in databases used for financial records, manufacturing and logistical information, personnel data, and other applications since the 1980s. Relational databases have often replaced legacy hierarchical databases and network databases because they were easier to implement and administer.<br>
+            Nonetheless, relational databases received continued, unsuccessful challenges by object database management systems in the 1980s and 1990s, (which were introduced in an attempt to address the so-called object-relational impedance mismatch between erlational databases and object-oriented application programs), as well as by XML database management systems in the 1990s.[citation needed] However, due to the expanse of technologies, such as horizontal scaling of computer clusters, NoSQL databases have recently become popular as an alternative to RDBMS databases.</p>
+        </div>
+    </div>
+    <script src="main.js"></script>
 </body>
 
 </html>
